@@ -6,11 +6,9 @@ Este repositório contém as configurações recomendadas para o arquivo `sysctl
 
 ## Como Aplicar as Configurações
 
-Para aplicar essas configurações, você pode editar o arquivo `sysctl.conf` usando o comando:
+Para aplicar essas configurações, você pode editar o arquivo `sysctl.conf` usando o comando: sudo nano /etc/sysctl.conf
 
 ```bash
-sudo nano /etc/sysctl.conf
-
 # Configurações recomendadas:
 vm.swappiness = 25
 net.core.wmem_default = 262144
@@ -22,7 +20,7 @@ net.ipv4.tcp_wmem = 65535 131072 194304
 kernel.randomize_va_space = 2
 fs.inotify.max_user_watches = 524288
 
-Comandos Adicionais (Não Testados)
+# Comandos Adicionais (Não Testados)
 Estas são configurações adicionais que ainda não foram devidamente testadas:
 
 kernel.sem = 250 32000 32 256
