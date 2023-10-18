@@ -1,0 +1,11 @@
+comandos adicionais que ainda não foram devidamente testados: 
+
+kernel.sem = 250 32000 32 256
+kernel.sched_autogroup_enabled = 0
+vm.dirty_background_ratio = 5
+vm.dirty_ratio = 10
+net.core.netdev_max_backlog = 1000
+net.ipv4.tcp_window_scaling = 1
+kernel.pid_max = 65536
+vm.vfs_cache_pressure = 50
+=======================+
