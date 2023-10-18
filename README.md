@@ -9,6 +9,9 @@ Este repositório contém configurações e comandos úteis para melhorar o dese
 
 2. **Atualização**:
    - Esta pasta contém scripts e comandos para manter seu sistema Linux atualizado. Automatize o processo de atualização para garantir que você tenha as últimas correções de segurança e atualizações de software.
+  
+3. **Quanto a nova Distro**:
+   - Esta pasta contém scripts quanto a iniciar novas distros (o único ponto que permanece é a base, que no caso é Debian). Levando em conta os scripst, tem em vista que foram adicionados as ferramentas e serviços 
 
 ## Configurações de Desempenho
 
