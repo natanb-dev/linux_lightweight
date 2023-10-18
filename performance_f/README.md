@@ -27,6 +27,10 @@ sudo sysctl -p
 # Comandos Adicionais (Não Testados)
 Estas são configurações adicionais que ainda não foram devidamente testadas:
 
+- editar somente a swappiness temporariamente:
+    sudo sysctl vm.swappiness=50
+
+
 kernel.sem = 250 32000 32 256
 kernel.sched_autogroup_enabled = 0
 vm.dirty_background_ratio = 5
