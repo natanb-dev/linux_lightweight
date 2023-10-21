@@ -1,11 +1,38 @@
 comandos adicionais que ainda não foram devidamente testados: 
 
-kernel.sem = 250 32000 32 256
-kernel.sched_autogroup_enabled = 0
-vm.dirty_background_ratio = 5
-vm.dirty_ratio = 10
-net.core.netdev_max_backlog = 1000
-net.ipv4.tcp_window_scaling = 1
-kernel.pid_max = 65536
-vm.vfs_cache_pressure = 50
 =======================+
+config 2:
+
+vm.swappiness = 25
+net.core.wmem_default = 262144
+net.core.wmem_max = 4194304
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.ipv4.tcp_rmem = 65535 131072 4194304
+net.ipv4.tcp_wmem = 65535 131072 194304
+kernel.randomize_va_space = 2
+fs.inotify.max_user_watches = 524288
+=======================+
+
+=======================+
+# Otimização de Desempenho
+vm.swappiness = 10
+net.core.wmem_default = 262144
+net.core.wmem_max = 4194304
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.ipv4.tcp_rmem = 65535 131072 4194304
+net.ipv4.tcp_wmem = 65535 131072 194304
+
+# Segurança Adicional
+kernel.randomize_va_space = 2
+fs.suid_dumpable = 0
+kernel.sysrq = 0
+kernel.kptr_restrict = 2
+net.ipv4.conf.all.log_martians = 1
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+=======================+
+
+
+		
