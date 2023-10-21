@@ -1,6 +1,6 @@
 # Configurações de Desempenho para Novas Distribuições Linux
 
-Este repositório contém configurações e comandos úteis para melhorar o desempenho e otimizar sua experiência em novas distribuições Linux. Além disso, inclui instruções sobre como manter seu sistema atualizado.
+Este repositório contém configurações e comandos úteis para melhorar o desempenho e otimizar sua experiência em novas distribuições Linux. Além disso, inclui instruções sobre como manter seu sistema atualizado e sem travamentos.
 
 ## Pastas
 
