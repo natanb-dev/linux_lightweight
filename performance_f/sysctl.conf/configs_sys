@@ -5,16 +5,9 @@
 
 Dentre as opções, este foi o que mais apresentou desempenho:
 =======================+
-
-vm.swappiness = 25
-vm.vfs_cache_pressure = 50 (opcional)
-net.core.wmem_default=262144
-net.core.wmem_max=4194304
-net.core.rmem_default=262144
-net.core.rmem_max=4194304
-net.ipv4.tcp_rmem = 65535 131072 4194304
-net.ipv4.tcp_wmem = 65535 131072 194304
-net.ipv4.tcp_timestamps=0
-net.ipv4.tcp_fin_timeout=30 (opcional)
+vm.swappiness = 10
+vm.vfs_cache_pressure = 50 
+vm.dirty_background_ratio=2
+vm.dirty_ratio=15
 =======================+
 
