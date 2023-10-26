@@ -1,26 +1,50 @@
-# Configurações de Desempenho para Novas Distribuições Linux
+# linux_lightweight
 
-Este repositório contém configurações e comandos úteis para melhorar o desempenho e otimizar sua experiência em novas distribuições Linux. Além disso, inclui instruções sobre como manter seu sistema atualizado e sem travamentos.
+# Configurações no sysctl.conf
 
-## Pastas
+Este repositório contém as configurações recomendadas para o arquivo `sysctl.conf` em sistemas Linux. O `sysctl.conf` é usado para configurar diversos parâmetros do kernel do Linux.
 
-1. **Performance**:
-   - Nesta pasta, você encontrará arquivos de configuração e dicas para otimizar o desempenho do seu sistema Linux. Isso pode incluir ajustes de sistema, configuração de gráficos, e muito mais.
+## Como Aplicar as Configurações
 
-2. **Atualização**:
-   - Esta pasta contém scripts e comandos para manter seu sistema Linux atualizado. Automatize o processo de atualização para garantir que você tenha as últimas correções de segurança e atualizações de software.
-  
-3. **Quanto a nova Distro**:
-   - Esta pasta contém scripts quanto a iniciar novas distros (o único ponto que permanece é a base, que no caso é Debian). Levando em conta os scripst, tem em vista que foram adicionados as ferramentas e serviços 
+```bash
+# Para aplicar essas configurações, você pode editar o arquivo `sysctl.conf` usando o comando: 
+sudo nano /etc/sysctl.conf
 
-## Configurações de Desempenho
+# Configurações recomendadas:
+vm.swappiness = 10
+vm.vfs_cache_pressure = 50 
+vm.dirty_background_ratio=2
+vm.dirty_ratio=15
 
-Dentro da pasta "Performance", você encontrará uma variedade de dicas e configurações para melhorar o desempenho do seu sistema Linux. Algumas das configurações incluem:
+# Para que as mudanças sejam postas em prática
+sudo sysctl -p 
 
-## Atualizando seu Sistema
+# Comandos Adicionais (Não Testados)
+Estas são configurações adicionais que ainda não foram devidamente testadas:
 
-Manter seu sistema atualizado é fundamental para garantir que você tenha as últimas correções de segurança e atualizações de software. A pasta "Atualização" fornece comandos e scripts para simplificar esse processo. Alguns dos recursos incluem:
+- editar somente a swappiness temporariamente:
+    sudo sysctl vm.swappiness=50
 
-## Contribuindo
 
-Contribuições são bem-vindas! Se você tiver dicas de desempenho adicionais, configurações ou comandos de atualização que gostaria de compartilhar, fique à vontade para enviar um pull request ou abrir uma issue.
+# Otimização - Internet: 
+vm.swappiness = 25
+vm.vfs_cache_pressure = 50 (opcional)
+net.core.wmem_default=262144
+net.core.wmem_max=4194304
+net.core.rmem_default=262144
+net.core.rmem_max=4194304
+net.ipv4.tcp_rmem = 65535 131072 4194304
+net.ipv4.tcp_wmem = 65535 131072 194304
+net.ipv4.tcp_timestamps=0
+net.ipv4.tcp_fin_timeout=30 (opcional)
+
+
+# Otimização - Segurança:
+kernel.randomize_va_space = 2
+fs.suid_dumpable = 0
+kernel.sysrq = 0
+kernel.kptr_restrict = 2
+net.ipv4.conf.all.log_martians = 1
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+
