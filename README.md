@@ -1,5 +1,3 @@
-Aqui está o README estilizado e expandido com mais detalhes, seguindo o estilo típico do GitHub e usando a tag "# linux_lightweight":
-
 # Linux Lightweight Configuration
 
 Este repositório contém configurações recomendadas para o arquivo `sysctl.conf` em sistemas Linux. O `sysctl.conf` é usado para configurar diversos parâmetros do kernel do Linux, ajudando a otimizar o desempenho e a segurança do sistema.
