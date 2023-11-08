@@ -4,4 +4,6 @@ Comando a serem usados assim que instalar a distro:
 	sudo apt install ncdu
 	sudo apt install preload
 	sudo apt install gedit
+	sudo apt install ufw
+	
 	
