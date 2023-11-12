@@ -52,7 +52,6 @@ net.core.rmem_default = 8192
 net.core.rmem_max = 65536
 net.ipv4.tcp_timestamps = 0
 net.ipv4.tcp_fin_timeout = 30
-	
 ```
 
 ### Otimização - Segurança:
