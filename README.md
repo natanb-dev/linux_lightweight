@@ -17,8 +17,8 @@ Para aplicar essas configurações, siga os passos a seguir:
    Configurações recomendadas:
 
    ```bash
-   vm.swappiness = 25
-   vm.vfs_cache_pressure = 25
+   vm.swappiness = 10
+   vm.vfs_cache_pressure = 50
    net.core.wmem_default = 32768
    net.core.wmem_max = 131072
    net.core.rmem_default = 32768

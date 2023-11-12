@@ -3,7 +3,7 @@
 	comando para mudanças: 
 		sudo nano /etc/sysctl.conf
 
-Dentre as opções, este foi o que mais apresentou desempenho:
+opção para testes
 =======================+
 vm.swappiness = 25
 vm.vfs_cache_pressure = 25
