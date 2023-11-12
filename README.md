@@ -17,16 +17,10 @@ Para aplicar essas configurações, siga os passos a seguir:
    Configurações recomendadas:
 
    ```bash
-   vm.swappiness = 10
-   vm.vfs_cache_pressure = 50
-   net.core.wmem_default = 32768
-   net.core.wmem_max = 131072
-   net.core.rmem_default = 32768
-   net.core.rmem_max = 131072
-   net.ipv4.tcp_timestamps = 0
-   net.ipv4.tcp_fin_timeout = 60
-   vm.dirty_background_ratio = 5
-   vm.dirty_ratio = 10
+	vm.swappiness = 10
+	vm.vfs_cache_pressure = 50
+	vm.dirty_background_ratio = 5
+	vm.dirty_ratio = 10
    ```
 
 3. Após adicionar as configurações desejadas, salve o arquivo e feche o editor.
@@ -52,16 +46,13 @@ Aqui estão algumas configurações adicionais que ainda não foram devidamente 
 ### Otimização - Internet:
 
 ```bash
-vm.swappiness = 25
-vm.vfs_cache_pressure = 50 (opcional)
-net.core.wmem_default=262144
-net.core.wmem_max=4194304
-net.core.rmem_default=262144
-net.core.rmem_max=4194304
-net.ipv4.tcp_rmem = 65535 131072 4194304
-net.ipv4.tcp_wmem = 65535 131072 194304
-net.ipv4.tcp_timestamps=0
-net.ipv4.tcp_fin_timeout=30 (opcional)
+net.core.wmem_default = 8192
+net.core.wmem_max = 65536
+net.core.rmem_default = 8192
+net.core.rmem_max = 65536
+net.ipv4.tcp_timestamps = 0
+net.ipv4.tcp_fin_timeout = 30
+	
 ```
 
 ### Otimização - Segurança:
