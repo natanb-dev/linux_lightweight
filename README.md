@@ -1,49 +1,49 @@
-# Linux Lightweight Configuration
+**Linux Lightweight Configuration**
 
-Este repositório contém configurações recomendadas para o arquivo `sysctl.conf` em sistemas Linux. O `sysctl.conf` é usado para configurar diversos parâmetros do kernel do Linux, ajudando a otimizar o desempenho e a segurança do sistema.
+This repository contains recommended settings for the `sysctl.conf` file on Linux systems. `sysctl.conf` is used to configure various Linux kernel parameters, helping to optimize system performance and security.
 
-## Aplicando as Configurações
+## Applying the Settings
 
-Para aplicar essas configurações, siga os passos a seguir:
+To apply these settings, follow the steps below:
 
-1. Abra o arquivo `sysctl.conf` em um editor de texto usando o comando:
+1. Open the `sysctl.conf` file in a text editor using the command:
 
-   ```bash
-   sudo nano /etc/sysctl.conf
-   ```
+```bash
+sudo nano /etc/sysctl.conf
+```
 
-2. Adicione as configurações recomendadas listadas abaixo ao arquivo `sysctl.conf`. 
+2. Add the recommended settings listed below to the `sysctl.conf` file.
 
-   Configurações recomendadas:
+**Recommended Settings:**
 
-   ```bash
-	vm.swappiness = 10
-	vm.vfs_cache_pressure = 50
-	vm.dirty_background_ratio = 5
-	vm.dirty_ratio = 10
-   ```
+```bash
+vm.swappiness = 10
+vm.vfs_cache_pressure = 50
+vm.dirty_background_ratio = 5
+vm.dirty_ratio = 10
+```
 
-3. Após adicionar as configurações desejadas, salve o arquivo e feche o editor.
+3. After adding the desired settings, save the file and close the editor.
 
-4. Para que as mudanças entrem em vigor, execute o seguinte comando:
+4. To make the changes take effect, run the following command:
 
-   ```bash
-   sudo sysctl -p
-   ```
+```bash
+sudo sysctl -p
+```
 
-Para alterar temporariamente a configuração de `vm.swappiness`, você pode usar o comando:
+To temporarily change the `vm.swappiness` setting, you can use the command:
 
 ```bash
 sudo sysctl vm.swappiness=10
 ```
 
-Lembrando que essas configurações são recomendadas e podem ser ajustadas de acordo com as necessidades específicas do seu sistema.
+Please note that these settings are recommended and can be adjusted to meet the specific needs of your system.
 
-## Comandos Adicionais (Não Testados)
+## Additional Commands (Untested)
 
-Aqui estão algumas configurações adicionais que ainda não foram devidamente testadas. Elas podem ser exploradas para otimização adicional:
+Here are some additional settings that have not yet been properly tested. They can be explored for further optimization:
 
-### Otimização - Internet:
+### Optimization - Internet:
 
 ```bash
 net.core.wmem_default = 8192
@@ -54,7 +54,7 @@ net.ipv4.tcp_timestamps = 0
 net.ipv4.tcp_fin_timeout = 30
 ```
 
-### Otimização - Segurança:
+### Optimization - Security:
 
 ```bash
 kernel.randomize_va_space = 2
@@ -66,4 +66,4 @@ net.ipv4.icmp_echo_ignore_broadcasts = 1
 net.ipv4.icmp_ignore_bogus_error_responses = 1
 ```
 
-Lembre-se de que essas configurações adicionais devem ser usadas com cautela e testadas em um ambiente de desenvolvimento antes de serem aplicadas em produção. Elas podem ajudar a melhorar o desempenho e a segurança do sistema, mas também podem afetar o comportamento do sistema de forma imprevista se não forem configuradas corretamente.
+Please note that these additional settings should be used with caution and tested in a development environment before being applied in production. They can help improve system performance and security, but they can also affect system behavior in unpredictable ways if not configured correctly.
