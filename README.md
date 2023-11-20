@@ -1,4 +1,4 @@
-**Linux Lightweight Configuration**
+# Linux Lightweight Configuration
 
 This repository contains recommended settings for the `sysctl.conf` file on Linux systems. `sysctl.conf` is used to configure various Linux kernel parameters, helping to optimize system performance and security.
 
