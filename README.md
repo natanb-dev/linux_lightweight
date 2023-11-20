@@ -31,17 +31,17 @@ vm.dirty_ratio = 10
 sudo sysctl -p
 ```
 
+Please note that these settings are recommended and can be adjusted to meet the specific needs of your system.
+
+## Additional Commands
+
+Here are some additional settings that have not yet been properly tested. They can be explored for further optimization:
+
 To temporarily change the `vm.swappiness` setting, you can use the command:
 
 ```bash
 sudo sysctl vm.swappiness=10
 ```
-
-Please note that these settings are recommended and can be adjusted to meet the specific needs of your system.
-
-## Additional Commands (Untested)
-
-Here are some additional settings that have not yet been properly tested. They can be explored for further optimization:
 
 ### Optimization - Internet:
 
